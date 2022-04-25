@@ -27,27 +27,40 @@ class MyStatelessWidget extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey,
+        leadingWidth: 1100,
+        leading: Row(
+          children: [
+            Flexible(
+              child:
+            TextButton(
+              style: style,
+              onPressed: () {},
+              child: const Text('All'),
+            )),
+             Flexible(
+               child:
+                    TextButton(
+                      style: style,
+                      onPressed: () {},
+                      child: const Text('Sounds'),
+            )),
+            Flexible(
+              child:
+                    TextButton(
+                    style: style,
+                    onPressed: () {},
+                    child: const Text('Images'),
+            )),
+            Flexible(
+              child:
+                    TextButton(
+                    style: style,
+                    onPressed: () {},
+                    child: const Text('Videos'),
+            )),
+          ],
+        ),
         actions: <Widget>[
-          TextButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('All'),
-          ),
-          TextButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('Sounds'),
-          ),
-          TextButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('Images'),
-          ),
-          TextButton(
-            style: style,
-            onPressed: () {},
-            child: const Text('Videos'),
-          ),
           IconButton(
             icon: const Icon(Icons.search),
             //tooltip: 'Show Snackbar',
