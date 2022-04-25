@@ -31,6 +31,13 @@ class MyStatelessWidget extends StatelessWidget {
         leading: Row(
           children: [
             Flexible(
+                child:
+                IconButton(
+                  icon: const Icon(Icons.menu),
+                  //tooltip: 'Show Snackbar',
+                  onPressed: () {},
+                )),
+            Flexible(
               child:
             TextButton(
               style: style,
