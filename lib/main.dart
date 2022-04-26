@@ -38,13 +38,33 @@ class MyStatelessWidget extends StatelessWidget {
             //tooltip: 'Show Snackbar',
             onPressed: () {},
           ),
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            //tooltip: 'Show Snackbar',
-            onPressed: () {},
-          ),
+          const VertPopUpMenu(),
         ],
       ),
     );
   }
 }
+
+class VertPopUpMenu extends StatelessWidget {
+  const VertPopUpMenu({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      icon: const Icon(Icons.more_vert),
+      itemBuilder: (context) => [
+        const PopupMenuItem(
+          child: Text('Test'),
+          value: 0,
+        ),
+        const PopupMenuItem(
+          child: Text('Test 2'),
+          value: 0,
+        ),
+      ],
+    );
+  }
+}
+
+//Create offstage class for leading icon
+
