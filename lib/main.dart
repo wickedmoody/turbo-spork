@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
       home: MyStatelessWidget(),
     );
@@ -22,64 +23,18 @@ class MyStatelessWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style =
-    TextButton.styleFrom(primary: Theme.of(context).colorScheme.onPrimary);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey,
-        leadingWidth: 1100,
-        leading: Row(
-          children: [
-            Flexible(
-                child:
-                IconButton(
-                  icon: const Icon(Icons.menu),
-                  //tooltip: 'Show Snackbar',
-                  onPressed: () {},
-                )),
-            Flexible(
-              child:
-            TextButton(
-              style: style,
-              onPressed: () {},
-              child: const Text('All'),
-            )),
-             Flexible(
-               child:
-                    TextButton(
-                      style: style,
-                      onPressed: () {},
-                      child: const Text('Sounds'),
-            )),
-            Flexible(
-              child:
-                    TextButton(
-                    style: style,
-                    onPressed: () {},
-                    child: const Text('Images'),
-            )),
-            Flexible(
-              child:
-                    TextButton(
-                    style: style,
-                    onPressed: () {},
-                    child: const Text('Videos'),
-            )),
-          ],
+        backgroundColor: Colors.grey[350],
+        title: const Text('NFoldr'),
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          //tooltip: 'Show Snackbar',
+          onPressed: () {},
         ),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.search),
-            //tooltip: 'Show Snackbar',
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.folder),
-            //tooltip: 'Show Snackbar',
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.share),
             //tooltip: 'Show Snackbar',
             onPressed: () {},
           ),
@@ -93,4 +48,3 @@ class MyStatelessWidget extends StatelessWidget {
     );
   }
 }
-
